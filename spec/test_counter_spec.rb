@@ -32,4 +32,16 @@ describe "test_counter" do
       expect(test_counter("Green,Amber,Red")).to eq("Green: 1\nAmber: 1\nRed: 1")
     end
   end
+
+  context("five grades of different colours should provide three answers") do
+    it "should receive Green, Red and return Green: 1\nRed: 1" do
+      expect(test_counter("Green,Green,Amber,Red,Green")).to eq("Green: 3\nAmber: 1\nRed: 1")
+    end
+  end
+
+  context("edge cases") do
+    it "should receive Green,Dave,Whimsy,Red and return Green: 1\nRed: 1\nUncounted: 2" do
+      expect(test_counter("Green,Dave,Whimsy,Red")).to eq("Green: 1\nRed: 1\nUncounted: 2")
+    end
+  end
 end
