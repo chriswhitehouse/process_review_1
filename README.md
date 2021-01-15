@@ -22,6 +22,8 @@ Example Input:
 | Input     | Output     |
 | :------------- | :------------- |
 | "Green" | "Green: 1" |
+| "green" | "Green: 1" |
+| "GREEN" | "Green: 1" |
 | "Green, Red" | "Green: 1\nRed: 1" |
 | "Green, Amber, Red" | "Green: 1\nAmber: 1\n Red: 1" |
 | "Green, Green, Amber, Red, Green"   | "Green: 3\nAmber :1\nRed: 1"      |
